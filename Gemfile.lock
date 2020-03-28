@@ -80,9 +80,6 @@ GEM
     crass (1.0.6)
     erubi (1.9.0)
     ffi (1.12.2-x64-mingw32)
-    fontawesome-rails (4.0.3.2)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.2)
@@ -211,7 +208,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chart-js-rails (~> 0.1.7)
-  fontawesome-rails (~> 4.0, >= 4.0.3.2)
   jbuilder (~> 2.7)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
