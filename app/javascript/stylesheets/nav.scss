@@ -1,0 +1,80 @@
+*{
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+
+.img-logo{
+  width: 45px;
+  height: 25px;
+}
+.head{
+    position: static;
+    width: 100%;
+    z-index: 1;
+}
+.c-text-police-blue{
+    color: #34495E;
+}
+.c-text-mint{
+    color:  #41B883;
+}
+.c-bg-police-blue{
+    background-color: #34495E;
+}
+.c-bg-mint{
+    background-color: #41B883;
+}
+.c-justify{
+    justify-content: space-between;
+}
+
+.c-nav-brand{
+    font-size: 2em;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+}
+
+.c-search-box{
+    width: 40rem !important;
+}
+
+.c-nav-m{
+    padding: 0.5em 3%;
+}
+.c-nav-h-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.c-nav-h-2 li a{
+    color: #ffffff;
+    margin: 0 1em;
+}
+.head-2{
+    padding: 0 3%;
+    /* height: 10vh; */
+    position: static;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-dropdown-menu{
+    outline-color: #41B883;
+    background-color: #34495E;
+    padding-right: 1em;
+}
+
+.c-slide-panel{
+    margin-top: 1% ;
+    display: flex ;
+    justify-content: center;
+}
+.c-img-slide{
+    height: 400px;
+    width: 1200px;
+}
+
+.c-slide-shadow{
+    box-shadow: 5px 20px 6px -6px #34495E;
+}
