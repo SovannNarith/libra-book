@@ -1,0 +1,11 @@
+
+- if obj.errors.any?
+  .row.justify-content-center.mt-2
+   .col-6
+    - obj.errors.each do |attr, msg|
+      .alert.alert-danger.my-1.mx-3
+        a.close data-dismiss="alert" href="#"  ×
+        strong
+          = attr
+          = '  =>  '
+        = msg

@@ -1,4 +1,12 @@
 @import '@fortawesome/fontawesome-free';
 @import './custom_bootstrap.scss';
-@import './sidebars/sidebar.scss';
 @import './nav.scss';
+@import './form_sign_up.scss';
+
+:root{
+  --police-blue: #34495E;
+  --mint: #41B883;
+}
+body{
+  overflow-x: hidden;
+}
