@@ -1,11 +1,14 @@
 class SessionsController < ApplicationController
 
-  def log_in
-    session[:user_id] = 1
-    redirect_to root_path
+  def new
+
   end
 
-  def log_out
+  def create
+        
+  end
+
+  def destroy
     session[:user_id] = nil
   end
 

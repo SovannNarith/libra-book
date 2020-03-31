@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'pages#home', to: 'pages#home'
   resources :books
   resources :users
-  get '/log_in', to: 'sessions#log_in'
-  post '/log_in' to: 'sessions#log_in'
-  delete '/log_out', to: 'sessions#log_out'
+  get '/log_in', to: 'sessions#new'
+  post '/log_in' to: 'sessions#create'
+  delete '/log_out', to: 'sessions#destroy'
 end
