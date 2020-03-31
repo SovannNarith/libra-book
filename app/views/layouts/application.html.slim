@@ -9,4 +9,8 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
+    = render partial: 'pages/navbar'
+    .mt-5
+      = render partial: 'inform/info'
     = yield
+    = render partial: 'pages/footer'

@@ -1,0 +1,55 @@
+.main
+  .head.c-text-police-blue
+    .head-1
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light.c-justify.c-nav-m
+        = link_to root_path, class:'navbar-brand c-nav-brand'
+          = image_tag 'logo.png', class: 'img-logo'
+          |  Gentella
+        form.form-inline
+          input.form-control.c-search-box[type="text" placeholder="Search" aria-label="Search"]
+          button.btn.btn-outline[type="submit"]
+            i.fas.fa-search[aria-hidden="true"]
+        ul.navbar-nav.c-user-m
+          li.nav-item
+            a.nav-link.c-nav-link[href="#"]
+              i.fas.fa-sign-in-alt
+              | Log in
+          li.nav-item
+            a.nav-link.c-nav-link[href= new_user_path]
+              | Sign Up
+              i.fas.fa-user-plus
+    .head-2.c-bg-mint
+      ul.navbar-nav.c-nav-h-2
+        li.nav-item
+          a.nav-link[href= root_path]
+            i.fas.fa-home
+            | Home
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+            i.fas.fa-list-ul
+            |  Category
+          .dropdown-menu.c-dropdown-menu[aria-labelledby="navbarDropdown"]
+            a.dropdown-item.c-dropdown[href="#"]
+              | Technology
+            a.dropdown-item.c-dropdown[href="#"]
+              | Health & Beauty
+            a.dropdown-item.c-dropdown[href="#"]
+              | Entertainment
+            a.dropdown-item.c-dropdown[href="#"]
+              | Psycho
+            a.dropdown-item.c-dropdown[href="#"]
+              | Novel Book
+            a.dropdown-item.c-dropdown[href="#"]
+              | Note Book
+        li.nav-item
+          a.nav-link[href="#"]
+            i.fas.fa-mobile
+            | Contact
+        li.nav-item
+          a.nav-link[href="#"]
+            i.fas.fa-address-card
+            | About Us
+        li.nav-item
+          a.nav-link[href="#"]
+            i.fas.fa-gavel
+            | Term & Policy

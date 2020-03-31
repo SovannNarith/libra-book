@@ -1,0 +1,34 @@
+= form_for @book, :html => {class: "form-horizontal px-5", role: "form"} do |f|
+  .form-row.my-3
+    .col.mx-2
+      = f.label :title, class: "col-form-label"
+    .col-10
+      = f.text_field :title, class: "form-control", placeholder: 'Enter Title'
+  .form-row
+    .col.mx-2
+      = f.label :description, class: "col-form-label"
+    .col-10
+      = f.text_area :description, class: "form-control", placeholder: 'Add Description here..!', rows: 15
+  .form-row.mt-3
+    .col-2.mx-2
+      = f.label "Upload Book Cover", class: "col-form-label"
+    .col-8
+      .row
+        .col-1
+          i.fas.fa-cloud-upload-alt.mt-2
+        .col-4
+          = f.file_field :book_image, direct_upload: true, accept: 'application/jpg', class: "form-control"
+  .form-row.mt-3
+    .col-2.mx-2
+      = f.label "Book File", class: "col-form-label"
+    .col-8
+      .row
+        .col-1
+          i.fas.fa-cloud-upload-alt.mt-2
+        .col-4
+          = f.file_field :book_file, direct_upload: true, accept: 'application/pdf, application/epub', class: "form-control"
+
+  .form-row.justify-content-center#c-btn-sign-up.mt-3
+    .col-2
+    .col-10
+      = f.submit 'Post This Book', class: 'btn btn-success c-bg-mint w-100'
