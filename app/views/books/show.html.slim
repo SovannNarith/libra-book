@@ -1,0 +1,15 @@
+.container.mt-3.px-10
+  .row.justify-content-center.c-bg-police-blue.text-light.p-4
+    .col-9.mr-1
+      .row.border-bottom.c-border-mint
+        h2.c-text-mint
+          = @book.title
+      .row.mt-3
+        p
+          = @book.description
+      .row.mt-4.border-bottom.c-border-mint.p-3
+        = link_to "Home", root_path, class: 'btn btn-primary mr-5'
+        = link_to 'Edit', edit_book_path(@book), class: 'btn btn-warning'
+        = link_to "Download", rails_blob_path(@book.book_file, disposition: "attachment"), class: 'btn btn-success ml-5'
+    .col-2
+      = image_tag @book.book_image, class: 'c-img-show shadow pb-1 pr-1 c-bg-mint rounded' if @book.book_image.attached?
