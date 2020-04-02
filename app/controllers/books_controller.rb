@@ -1,5 +1,11 @@
 class BooksController < ApplicationController
 
+    before_action :require_user, only: [:new, :create,:edit, :update, :destroy]
+
+  def index
+    @books = new_books
+  end
+
   def new
     @book = Book.new
   end
@@ -42,10 +48,22 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    if @user.destroy
+      flash[:danger] = "You have delete a posted"
+      render 'index'
+    end
+  end
+
 
   private
     def book_params
       params.require(:book).permit(:title, :description, :book_image, :book_file)
+    end
+
+    def new_books
+      books = Book.last(8)
     end
 
 

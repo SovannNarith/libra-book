@@ -1,1 +1,13 @@
-p | log in
+
+.container.justify-content-center.w-25.border.c-bg-police-blue.p-3.rounded
+  h3.c-text-mint.text-center
+    | Log In
+  = form_for :session, :html => {class: "form-horizontal text-light", role: "form", url: log_in_path} do |f|
+    .form-group
+        = f.label "Username", class: "col-form-label"
+        = f.text_field :username, class: "form-control", placeholder: ' Enter Username' , autofocus: 'auto'
+    .form-group
+        = f.label "Password", class: "col-form-label"
+        = f.password_field :password, class: "form-control", placeholder: 'Enter Password'
+    .form-group
+        = f.submit "Sign Up", class: "btn btn-success c-bg-mint btn-block mt-5"

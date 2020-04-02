@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :books
   resources :users
   get '/log_in', to: 'sessions#new'
-  post '/log_in' to: 'sessions#create'
+  post '/log_in', to: 'sessions#create'
   delete '/log_out', to: 'sessions#destroy'
+  get '/log_out', to: 'sessions#destroy'
 end

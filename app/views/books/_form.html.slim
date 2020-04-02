@@ -17,7 +17,7 @@
         .col-1
           i.fas.fa-cloud-upload-alt.mt-2
         .col-4
-          = f.file_field :book_image, direct_upload: true, accept: 'application/jpg', class: "form-control"
+          = f.file_field :book_image, direct_upload: true, accept: 'image/png, image/jpg, image/jpeg', class: "form-control"
   .form-row.mt-3
     .col-2.mx-2
       = f.label "Book File", class: "col-form-label"
