@@ -21,9 +21,19 @@
                 i.fas.fa-user-plus
           - else
             li.nav-item
-              a.nav-link.c-nav-link[href= log_out_path]
-                i.fas.fa-sign-out-alt
-                | Log Out
+              a.nav-link.c-nav-link[href= new_book_path]
+                i.fas.fa-upload
+                | Upload Book
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+                i.fas.fa-user-circle.c-text-mint
+              .dropdown-menu.c-dropdown-menu#c-drop-left[aria-labelledby="navbarDropdown"]
+                a.dropdown-item.c-dropdown.text-light[href= user_path(current_user)]
+                  | Your Profile
+                a.dropdown-item.c-dropdown.text-light[href="#"]
+                  | Setting
+                a.dropdown-item.c-dropdown.text-light[href= log_out_path]
+                  | Log Out
     .head-2.c-bg-mint
       ul.navbar-nav.c-nav-h-2
         li.nav-item
