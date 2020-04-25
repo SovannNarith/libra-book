@@ -1,6 +1,6 @@
-.container.mt-5.font-weight-bold.c-text-mint.border-bottom.border-success
+.container.mt-3.font-weight-bold.c-text-mint.border-bottom.border-success
   .row
-    h4
+    h4.ml-2
       | Feature Books
 .container.card.border.mt-2.py-4
   .row.justify-content-center
@@ -10,4 +10,3 @@
           = link_to image_tag(book.book_image, width: 90, heigth: 120), book_path(book)
         .row.text-center.mx-2.mt-2
           = link_to book.title, book_path(book), class: 'c-text-mint'
- 

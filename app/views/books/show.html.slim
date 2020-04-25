@@ -8,8 +8,9 @@
         p
           = @book.description
       .row.mt-4.border-bottom.c-border-mint.p-3
-        = link_to 'Edit', edit_book_path(@book), class: 'btn btn-warning mr-3'
-        = link_to 'Delete', book_path(@book), method: :delete, data: {confirm: "Are You Sure to delete?" }, class: 'btn btn-danger mr-3'
+        - if logged_in? && (current_user == @book.user) 
+          = link_to 'Edit', edit_book_path(@book), class: 'btn btn-warning mr-3'
+          = link_to 'Delete', book_path(@book), method: :delete, data: {confirm: "Are You Sure to delete?" }, class: 'btn btn-danger mr-3'
         = link_to "Download", rails_blob_path(@book.book_file, disposition: "attachment"), class: 'btn btn-success' if @book.book_file.attached?
     .col-2
       = image_tag @book.book_image, class: 'c-img-show shadow pb-1 pr-1 c-bg-mint rounded' if @book.book_image.attached?
