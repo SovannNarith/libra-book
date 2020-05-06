@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+   before_action :require_user, only: [:edit, :update]
+   before_action :require_admin, only: [:edit, :update, :destroy]
+
   def new
     @user = User.new
   end
@@ -8,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Congratulation you have successfully sign up.!"
-      redirect_to user_path(@user)
+      redirect_to log_in_path
     else
       flash[:danger] = "Error information please try again!"
       render 'new'

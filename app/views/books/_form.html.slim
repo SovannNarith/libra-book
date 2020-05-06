@@ -8,7 +8,7 @@
     .col.mx-2
       = f.label :description, class: "col-form-label"
     .col-10
-      = f.text_area :description, class: "form-control", placeholder: 'Add Description here..!', rows: 15
+      = f.text_area :description, class: "form-control", placeholder: 'Add Description here..!', rows: 10
   .form-row.mt-3
     .col-2.mx-2
       = f.label "Upload Book Cover", class: "col-form-label"
@@ -16,8 +16,8 @@
       .row
         .col-1
           i.fas.fa-cloud-upload-alt.mt-2
-        .col-4
-          = f.file_field :book_image, direct_upload: true, accept: 'application/jpg', class: "form-control"
+        .col-10
+          = f.file_field :book_image, direct_upload: true, accept: 'image/png, image/jpg, image/jpeg', class: "form-control"
   .form-row.mt-3
     .col-2.mx-2
       = f.label "Book File", class: "col-form-label"
@@ -25,7 +25,7 @@
       .row
         .col-1
           i.fas.fa-cloud-upload-alt.mt-2
-        .col-4
+        .col-10
           = f.file_field :book_file, direct_upload: true, accept: 'application/pdf, application/epub', class: "form-control"
 
   .form-row.justify-content-center#c-btn-sign-up.mt-3
