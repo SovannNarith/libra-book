@@ -22,11 +22,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     rescue ActiveRecord::RecordNotFound
     flash[:info] = "User not found!"
-    redirect_to new_user_path
+    redirect_to users_path
   end
 
   def index
-    @users = User.all
+    @users = current_user
   end
 
   def edit
