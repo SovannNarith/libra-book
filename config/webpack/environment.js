@@ -1,6 +1,6 @@
-const { environment } = require('@rails/webpacker')
+const { environment } = require('@rails/webpacker');
 
-const webpack = require('webpack')
+const webpack = require('webpack');
 environment.plugins.append(
   'Provide',
   new webpack.ProvidePlugin({
@@ -11,6 +11,6 @@ environment.plugins.append(
   performance: {
     hints: false
   }
-)
+);
 
 module.exports = environment
